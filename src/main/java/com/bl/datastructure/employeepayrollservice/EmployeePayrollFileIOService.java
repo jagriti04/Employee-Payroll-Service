@@ -9,6 +9,7 @@ import java.util.List;
 public class EmployeePayrollFileIOService {
 	public static String PAYROLL_FILE_NAME = "payroll-file.txt";
 
+	// write data to file
 	public void writeData(List<EmployeePayrollData> empPayrollList) {
 		StringBuffer empBuffer = new StringBuffer();
 		empPayrollList.forEach(employee -> {
