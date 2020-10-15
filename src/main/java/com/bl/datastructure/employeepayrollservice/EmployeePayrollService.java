@@ -8,9 +8,11 @@ public class EmployeePayrollService {
 	public enum IOService {
 		CONSOLE_IO, FILE_IO, DB_IO, REST_IO
 	}
-
 	private List<EmployeePayrollData> empPayrollList;
 
+	public EmployeePayrollService() { }
+	
+	// Parameterized constructor
 	public EmployeePayrollService(List<EmployeePayrollData> empPayrollList) {
 		this.empPayrollList = empPayrollList;
 	}
@@ -34,6 +36,14 @@ public class EmployeePayrollService {
 		empPayrollList.add(new EmployeePayrollData(id, name, salary));
 	}
 
+	// read from file
+	public long readEmployeePayrollData(IOService ioService) {
+		if (ioService.equals(IOService.FILE_IO)) {
+			this.empPayrollList = new EmployeePayrollFileIOService().readData();
+		}
+		return empPayrollList.size();
+	}
+	
 	// write data to console
 	private void writeToConsole() {
 		System.out.println("\nWriting emp payroll roaster to console\n" + empPayrollList);

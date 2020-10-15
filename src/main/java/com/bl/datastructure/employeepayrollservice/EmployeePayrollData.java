@@ -12,6 +12,6 @@ public class EmployeePayrollData {
 	}
 
 	public String toString() {
-		return "id= " + empId + " name: " + empName + " salary: " + empSalary;
+		return "id=" + empId + ", name=" + empName + ", salary=" + empSalary;
 	}
 }
