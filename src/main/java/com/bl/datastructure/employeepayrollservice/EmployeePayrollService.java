@@ -45,7 +45,8 @@ public class EmployeePayrollService {
 			new EmployeePayrollFileIOService().writeData(empPayrollList);
 		}
 	}
-	
+
+	// count the entries
 	public long countEntries(IOService ioService) {
 		if (ioService.equals(IOService.FILE_IO))
 			return new EmployeePayrollFileIOService().countEntries();

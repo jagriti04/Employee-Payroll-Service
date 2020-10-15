@@ -6,7 +6,6 @@ public class EmployeePayrollData {
 	private double empSalary;
 
 	public EmployeePayrollData(int id, String name, double salary) {
-		// TODO Auto-generated constructor stub
 		this.empId = id;
 		this.empName = name;
 		this.empSalary = salary;
